@@ -1,0 +1,14 @@
+name: nlttosql-semantickernel
+channels:
+  - conda-forge
+  - defaults
+  - jupyter
+dependencies:
+  - python=3.9
+  - pip
+  - ipykernel
+  - poppler
+  - pip:
+    - -r requirements.txt
+
+   

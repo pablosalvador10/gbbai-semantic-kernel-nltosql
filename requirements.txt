@@ -3,3 +3,6 @@ python-dotenv==1.0.0
 openai==1.12.0
 Faker==23.2.1
 pyodbc==5.1.0
+openai
+tiktoken
+requests

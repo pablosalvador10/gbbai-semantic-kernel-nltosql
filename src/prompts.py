@@ -95,3 +95,29 @@ def get_intent_prompt(chat_history, input):
     Intent: how_to_database
     Return Intent:
     """
+
+
+def get_final_prompt(chat_history: str, input: str, context: str, sources: str) -> str:
+    """
+    Generate a final prompt based on the chat history, user's input, context, and sources of information.
+
+    Args:
+        chat_history (str): The history of the chat.
+        input (str): The user's most recent question.
+        context (str): The context of the conversation.
+        sources (str): The sources of information.
+
+    Returns:
+        str: The final prompt.
+    """
+
+    return f"""
+    You are an assistant for question-answering tasks.
+                Use the following pieces of retrieved context to answer the question.
+                If you don't know the answer, just say that you don't know.
+                Use three sentences maximum and keep the answer concise. Please return the source always.
+                Question: {input}
+                Context: {context}
+                Answer:
+                Sources: {sources}
+    """
